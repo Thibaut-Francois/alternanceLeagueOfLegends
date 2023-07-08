@@ -31,6 +31,9 @@ class AppFixtures extends Fixture
             $manager->persist($lane);
         }
 
+        $manager->flush();
+
+
 //        $synergy = new ChoiceSynergy();
 //        $synergy->setSynergy(12);
 //
@@ -46,7 +49,7 @@ class AppFixtures extends Fixture
                 $synergy = new ChoiceSynergy();
                 $synergy->setLane($oneLane);
                 $synergy->setRole($oneRole);
-                //$synergy->setSynergy($score[$i][$y]);
+                $synergy->setSynergy($score[$i][$y]);
                 $synergy->setSynergy(12);
 
                 $manager->persist($synergy);
