@@ -21,11 +21,15 @@ class Role
     #[ORM\OneToMany(mappedBy: 'role', targetEntity: ChoiceSynergy::class)]
     private Collection $choiceSynergies;
 
+    #[ORM\OneToMany(mappedBy: 'role', targetEntity: Champion::class)]
+    private Collection $champions;
+
 
     public function __construct()
     {
         $this->Lane = new ArrayCollection();
         $this->choiceSynergies = new ArrayCollection();
+        $this->champions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -69,6 +73,36 @@ class Role
             // set the owning side to null (unless already changed)
             if ($choiceSynergy->getRole() === $this) {
                 $choiceSynergy->setRole(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Champion>
+     */
+    public function getChampions(): Collection
+    {
+        return $this->champions;
+    }
+
+    public function addChampion(Champion $champion): static
+    {
+        if (!$this->champions->contains($champion)) {
+            $this->champions->add($champion);
+            $champion->setRole($this);
+        }
+
+        return $this;
+    }
+
+    public function removeChampion(Champion $champion): static
+    {
+        if ($this->champions->removeElement($champion)) {
+            // set the owning side to null (unless already changed)
+            if ($champion->getRole() === $this) {
+                $champion->setRole(null);
             }
         }
 

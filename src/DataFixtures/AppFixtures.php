@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Champion;
 use App\Entity\ChoiceSynergy;
 use App\Entity\Lane;
 use App\Entity\Role;
@@ -15,6 +16,7 @@ class AppFixtures extends Fixture
         // $product = new Product();
         // $manager->persist($product);
 
+        // ----------Insertion des roles
         $liste_roles=['Tank', 'Carry AP', 'Carry AD', 'Assassin', 'Healer'];
         foreach ($liste_roles as $i){
             $role = new Role();
@@ -23,6 +25,7 @@ class AppFixtures extends Fixture
             $manager->persist($role);
         }
 
+        // ----------Insertion des lanes
         $liste_lanes=['Top', 'Jungle', 'Mid', 'ADC', 'Support'];
         foreach ($liste_lanes as $i){
             $lane = new Lane();
@@ -34,11 +37,7 @@ class AppFixtures extends Fixture
         $manager->flush();
 
 
-//        $synergy = new ChoiceSynergy();
-//        $synergy->setSynergy(12);
-//
-//        $manager->persist($synergy);
-
+        // ----------Insertion des scores de synergies
         $allLanes = $manager->getRepository(Lane::class)->findAll();
         $allRoles = $manager->getRepository(Role::class)->findAll();
         $score = [[15,10,10,5,0], [10,5,5,15,0], [0,15,10,15,5], [0,5,15,10,0], [15,10,0,5,15]];
@@ -50,7 +49,6 @@ class AppFixtures extends Fixture
                 $synergy->setLane($oneLane);
                 $synergy->setRole($oneRole);
                 $synergy->setSynergy($score[$i][$y]);
-                $synergy->setSynergy(12);
 
                 $manager->persist($synergy);
 
@@ -58,6 +56,21 @@ class AppFixtures extends Fixture
             }
             $i++;
         }
+
+        // ----------Insertion des champions
+        $liste_champions=[['Ahri', 'test_alternance_leagueOfLegends\public\uploads\champions/ahri.jpg']]];
+        $i=0;
+        foreach ($liste_champions as $oneChampion){
+            $champion = new Champion();
+            $champion->setNom($oneChampion[$i][0]);
+            $champion->getImage($oneChampion[$i][1]);
+
+            $manager->persist($champion);
+            $i++;
+        }
+
+
+
 
         $manager->flush();
     }
