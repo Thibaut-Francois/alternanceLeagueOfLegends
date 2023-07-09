@@ -58,7 +58,14 @@ class AppFixtures extends Fixture
         }
 
         // ----------Insertion des champions
-        $liste_champions=[['Ahri', '../public/uploads/champions/ahri.jpg', 'Carry AP'], ['Braum', '../public/uploads/champions/braum.jpg', 'Tank']];
+        $liste_champions=[
+            ['Ahri', '../public/uploads/champions/ahri.jpg', 'Carry AP'],
+            ['Braum', '../public/uploads/champions/braum.jpg', 'Tank'],
+            ['Caitlyn', '', 'Carry AD'],
+            ['Dr. Mundo', '', 'Tank'],
+            ['Janna', '', 'Healer'],
+            ['Shaco', '', 'Assassin'],
+            ];
         foreach ($liste_champions as $oneChampion){
             $champion = new Champion();
             $champion->setNom($oneChampion[0]);

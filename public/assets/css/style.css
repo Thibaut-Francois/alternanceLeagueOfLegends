@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  overflow-x: hidden;
+}
+* h1 {
+  text-align: center;
+}
+* h2 {
+  text-align: center;
+}
+* .header {
+  height: 25vh;
+}
+* .select {
+  height: 55vh;
+  display: flex;
+  justify-content: space-around;
+}
+* .select .card {
+  display: flex;
+  justify-content: center;
+  border: solid black;
+  height: auto;
+  width: 18%;
+}
+* .select .card section .image {
+  height: 30vh;
+}
+* .btn {
+  height: 20vh;
+}
+* .btn div {
+  display: flex;
+  justify-content: center;
+}
+* .btn div button:hover {
+  display: flex;
+  background-color: aqua;
+}
+
+/*# sourceMappingURL=style.css.map */
