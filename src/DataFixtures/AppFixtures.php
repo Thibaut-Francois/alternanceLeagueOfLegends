@@ -58,12 +58,28 @@ class AppFixtures extends Fixture
         }
 
         // ----------Insertion des champions
-        $liste_champions=[['Ahri', 'test_alternance_leagueOfLegends\public\uploads\champions/ahri.jpg']]];
-        $i=0;
+        $liste_champions=[['Ahri', '../public/uploads/champions/ahri.jpg', 'Carry AP'], ['Braum', '../public/uploads/champions/braum.jpg', 'Tank']];
         foreach ($liste_champions as $oneChampion){
             $champion = new Champion();
-            $champion->setNom($oneChampion[$i][0]);
-            $champion->getImage($oneChampion[$i][1]);
+            $champion->setNom($oneChampion[0]);
+            $champion->setImage($oneChampion[1]);
+
+            if ($oneChampion[2] === 'Carry AP'){
+                $theRightRole = $manager->getRepository(Role::class)->findOneBy(array('nom' => 'Carry AP'));
+                $champion->setRole($theRightRole);
+            }elseif ($oneChampion[2] === 'Carry AD'){
+                $theRightRole = $manager->getRepository(Role::class)->findOneBy(array('nom' => 'Carry AD'));
+                $champion->setRole($theRightRole);
+            }elseif ($oneChampion[2] === 'Tank'){
+                $theRightRole = $manager->getRepository(Role::class)->findOneBy(array('nom' => 'Tank'));
+                $champion->setRole($theRightRole);
+            }elseif ($oneChampion[2] === 'Assassin'){
+                $theRightRole = $manager->getRepository(Role::class)->findOneBy(array('nom' => 'Assassin'));
+                $champion->setRole($theRightRole);
+            }elseif ($oneChampion[2] === 'Healer'){
+                $theRightRole = $manager->getRepository(Role::class)->findOneBy(array('nom' => 'Healer'));
+                $champion->setRole($theRightRole);
+            }
 
             $manager->persist($champion);
             $i++;
