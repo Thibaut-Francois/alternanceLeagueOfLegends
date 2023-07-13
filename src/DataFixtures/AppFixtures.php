@@ -59,12 +59,12 @@ class AppFixtures extends Fixture
 
         // ----------Insertion des champions
         $liste_champions=[
-            ['Ahri', '../public/uploads/champions/ahri.jpg', 'Carry AP'],
-            ['Braum', '../public/uploads/champions/braum.jpg', 'Tank'],
-            ['Caitlyn', '', 'Carry AD'],
-            ['Dr. Mundo', '', 'Tank'],
-            ['Janna', '', 'Healer'],
-            ['Shaco', '', 'Assassin'],
+            ['Ahri', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250', 'Carry AP'],
+            ['Braum', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd140e30fa86d6ddd/5db05fb2242f426df132f95d/RiotX_ChampionList_braum.jpg?quality=90&width=250', 'Tank'],
+            ['Caitlyn', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/61b1eb901d158d4007de9685/RiotX_ChampionList_caitlyn_v2.jpg?quality=90&width=250', 'Carry AD'],
+            ['Dr. Mundo', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte88a3d7e9e408904/61b1ea136a78b87751002a68/RiotX_ChampionList_drmundo_v2.jpg?quality=90&width=250', 'Tank'],
+            ['Janna', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt02bf5329f8abe45d/5db05fcedf78486c826dcd06/RiotX_ChampionList_janna.jpg?quality=90&width=250', 'Healer'],
+            ['Shaco', 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc8b1d1ba926d01cc/5db060036e8b0c6d038c5cba/RiotX_ChampionList_shaco.jpg?quality=90&width=250', 'Assassin'],
             ];
         foreach ($liste_champions as $oneChampion){
             $champion = new Champion();

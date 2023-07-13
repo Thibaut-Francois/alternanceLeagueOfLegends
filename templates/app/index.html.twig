@@ -11,8 +11,10 @@
     <section class="header">
         <h1>League Of Legends Synergy</h1>
     </section>
+    <pre></pre>
 
     <section class="select">
+        {% for lane in lanes %}
         <div class="card">
             <section>
                 <div>
@@ -29,6 +31,7 @@
 
                 <div>
                     <select>
+                        <option>Champion</option>
                         {% for champion in champions %}
                             <option>{{ champion.nom }}</option>
                         {% endfor %}
@@ -36,11 +39,12 @@
                 </div>
 
                 <div>
-                    <h2>TOP</h2>
+                    <h2>{{ lane.nom }}</h2>
                 </div>
             </section>
         </div>
-
+        {% endfor %}
+<!--
         <div class="card"></div>
 
         <div class="card"></div>
@@ -48,6 +52,7 @@
         <div class="card"></div>
 
         <div class="card"></div>
+--!>
     </section>
 
     <section class="btn">

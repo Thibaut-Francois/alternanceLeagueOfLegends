@@ -22,6 +22,9 @@ class Champion
     #[ORM\ManyToOne(inversedBy: 'champions')]
     private ?Role $role = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?Lane $lane = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Champion
     public function setRole(?Role $role): static
     {
         $this->role = $role;
+
+        return $this;
+    }
+
+    public function getLane(): ?Lane
+    {
+        return $this->lane;
+    }
+
+    public function setLane(?Lane $lane): static
+    {
+        $this->lane = $lane;
 
         return $this;
     }
