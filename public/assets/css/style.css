@@ -25,6 +25,10 @@
   height: auto;
   width: 18%;
 }
+* .select .card section .slide {
+  display: flex;
+  justify-content: center;
+}
 * .select .card section .image {
   height: 30vh;
 }

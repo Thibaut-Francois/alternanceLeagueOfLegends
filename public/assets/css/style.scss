@@ -29,6 +29,11 @@
       width: 18%;
 
       section{
+        .slide{
+          display: flex;
+          justify-content: center;
+        }
+
         .image{
           height: 30vh;
         }
