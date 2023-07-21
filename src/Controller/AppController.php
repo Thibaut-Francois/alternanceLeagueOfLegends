@@ -34,8 +34,9 @@ class AppController extends AbstractController
     {
         return $this->json(
             $table=[
-                'champions' => $championRepository->findAll(),
-                /*'champ_selected'=> [
+                //'champions' => $championRepository->findAll(),
+
+                'champ_selected'=> [
                     [
                         'nom'=>'Ahri',
                         'img'=>'/uploads/champions/ahri.jpg',
@@ -69,7 +70,7 @@ class AppController extends AbstractController
                         'img'=>'/uploads/champions/janna.jpg',
                         'role'=>'Healer'
                     ],
-                ],*/
+                ],
             ]
         );
     }

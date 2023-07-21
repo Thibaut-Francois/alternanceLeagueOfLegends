@@ -4,59 +4,59 @@
   background-color: aliceblue;
   overflow: hidden;
 }
-* h2 {
+* body h2 {
   text-align: center;
 }
-* .header {
+* body .header {
   height: 25vh;
 }
-* .header h1 {
+* body .header h1 {
   text-align: center;
   margin-top: 10vh;
 }
-* .select {
+* body .select {
   height: 55vh;
   display: flex;
   justify-content: space-around;
 }
-* .select .card {
+* body .select .card {
   display: flex;
   justify-content: center;
   border: solid black;
   height: auto;
   width: 18%;
 }
-* .select .card section {
+* body .select .card section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-* .select .card section .slide {
+* body .select .card section .slide {
   display: flex;
   justify-content: center;
 }
-* .select .card section .slide button {
+* body .select .card section .slide button {
   border: none;
 }
-* .select .card section .slide button:hover {
+* body .select .card section .slide button:hover {
   cursor: pointer;
 }
-* .select .card section .names {
+* body .select .card section .names {
   display: flex;
   justify-content: center;
 }
-* .select .card section .image {
+* body .select .card section .image {
   height: 30vh;
 }
-* .btn {
+* body .btn {
   height: 20vh;
 }
-* .btn div {
+* body .btn div {
   display: flex;
   justify-content: center;
   margin-top: 5vh;
 }
-* .btn div button:hover {
+* body .btn div button:hover {
   display: flex;
   background-color: aqua;
 }

@@ -6,7 +6,6 @@ fetch('/api')
         //document.querySelector('pre').innerHTML = JSON.stringify(r, null, 2)
         //document.querySelector('#test_img').src = r.champ_selected[0].img
 
-        console.log(r.json())
 
         let mainSection = document.querySelector('.select')
 

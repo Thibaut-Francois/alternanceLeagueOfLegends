@@ -4,74 +4,75 @@
   background-color: aliceblue;
   overflow: hidden;
 
+  body{
 
-
-  h2{
-    text-align: center;
-  }
-
-  .header{
-    height: 25vh;
-
-    h1{
+    h2{
       text-align: center;
-      margin-top: 10vh;
     }
-  }
 
-  .select{
-    height: 55vh;
-    display: flex;
-    justify-content: space-around;
+    .header{
+      height: 25vh;
 
-    .card{
+      h1{
+        text-align: center;
+        margin-top: 10vh;
+      }
+    }
+
+    .select{
+      height: 55vh;
       display: flex;
-      justify-content: center;
-      border: solid black;
-      height: auto;
-      width: 18%;
+      justify-content: space-around;
 
-      section{
+      .card{
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        border: solid black;
+        height: auto;
+        width: 18%;
 
-        .slide{
+        section{
           display: flex;
-          justify-content: center;
+          flex-direction: column;
+          justify-content: space-around;
 
-          button{
-            border: none;
+          .slide{
+            display: flex;
+            justify-content: center;
+
+            button{
+              border: none;
+            }
+
+            button:hover{
+              cursor: pointer;
+            }
           }
 
-          button:hover{
-            cursor: pointer;
+          .names{
+            display: flex;
+            justify-content: center;
           }
-        }
 
-        .names{
-          display: flex;
-          justify-content: center;
-        }
-
-        .image{
-          height: 30vh;
+          .image{
+            height: 30vh;
+          }
         }
       }
     }
-  }
 
-  .btn{
-    height: 20vh;
+    .btn{
+      height: 20vh;
 
-    div{
-      display: flex;
-      justify-content: center;
-      margin-top: 5vh;
-
-      button:hover{
+      div{
         display: flex;
-        background-color: aqua;
+        justify-content: center;
+        margin-top: 5vh;
+
+        button:hover{
+          display: flex;
+          background-color: aqua;
+        }
       }
     }
   }
