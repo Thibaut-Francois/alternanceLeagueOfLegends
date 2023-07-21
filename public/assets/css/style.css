@@ -4,14 +4,15 @@
   background-color: aliceblue;
   overflow: hidden;
 }
-* h1 {
-  text-align: center;
-}
 * h2 {
   text-align: center;
 }
 * .header {
   height: 25vh;
+}
+* .header h1 {
+  text-align: center;
+  margin-top: 10vh;
 }
 * .select {
   height: 55vh;
@@ -25,7 +26,22 @@
   height: auto;
   width: 18%;
 }
+* .select .card section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 * .select .card section .slide {
+  display: flex;
+  justify-content: center;
+}
+* .select .card section .slide button {
+  border: none;
+}
+* .select .card section .slide button:hover {
+  cursor: pointer;
+}
+* .select .card section .names {
   display: flex;
   justify-content: center;
 }
@@ -38,6 +54,7 @@
 * .btn div {
   display: flex;
   justify-content: center;
+  margin-top: 5vh;
 }
 * .btn div button:hover {
   display: flex;

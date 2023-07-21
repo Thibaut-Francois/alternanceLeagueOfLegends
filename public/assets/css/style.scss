@@ -4,9 +4,7 @@
   background-color: aliceblue;
   overflow: hidden;
 
-  h1{
-    text-align: center;
-  }
+
 
   h2{
     text-align: center;
@@ -14,6 +12,11 @@
 
   .header{
     height: 25vh;
+
+    h1{
+      text-align: center;
+      margin-top: 10vh;
+    }
   }
 
   .select{
@@ -29,7 +32,24 @@
       width: 18%;
 
       section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
         .slide{
+          display: flex;
+          justify-content: center;
+
+          button{
+            border: none;
+          }
+
+          button:hover{
+            cursor: pointer;
+          }
+        }
+
+        .names{
           display: flex;
           justify-content: center;
         }
@@ -47,6 +67,8 @@
     div{
       display: flex;
       justify-content: center;
+      margin-top: 5vh;
+
       button:hover{
         display: flex;
         background-color: aqua;

@@ -12,16 +12,12 @@
         <h1>League Of Legends Synergy</h1>
     </section>
 
-    <pre></pre>
-    <oui></oui>
-    <img id="test_img" src="">
-
     <section class="select">
         {% for lane in lanes %}
         <div class="card">
             <section>
                 <div class="slide">
-                    <button>Flèche vers le haut</button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 7.828V20h-2V7.828l-5.364 5.364l-1.414-1.414L12 4l7.778 7.778l-1.414 1.414L13 7.828Z"/></svg></button>
                 </div>
 
                 <div class="image">
@@ -29,12 +25,11 @@
                 </div>
 
                 <div class="slide">
-                    <button>Flèche vers le bas</button>
+                    <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m13 16.172l5.364-5.364l1.414 1.414L12 20l-7.778-7.778l1.414-1.414L11 16.172V4h2v12.172Z"/></svg></button>
                 </div>
 
-                <div>
+                <div class="names">
                     <select id='test'>
-                        <option>Champion</option>
                         {% for champion in champions %}
                             <option value="{{ champion.nom }}">{{ champion.nom }}</option>
                         {% endfor %}
